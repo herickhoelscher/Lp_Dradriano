@@ -61,3 +61,26 @@ const progressIO = new IntersectionObserver((entries) => {
 if(progressBar) progressIO.observe(progressBar);
 
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// Gallery lightbox
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxClose = document.getElementById('lightboxClose');
+function openLightbox(src, alt){
+  lightboxImg.src = src;
+  lightboxImg.alt = alt;
+  lightbox.classList.add('open');
+}
+function closeLightbox(){
+  lightbox.classList.remove('open');
+  lightboxImg.src = '';
+}
+document.querySelectorAll('.gallery-item').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const img = btn.querySelector('img');
+    openLightbox(btn.dataset.full, img.alt);
+  });
+});
+if(lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+if(lightbox) lightbox.addEventListener('click', (e) => { if(e.target === lightbox) closeLightbox(); });
+document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeLightbox(); });
