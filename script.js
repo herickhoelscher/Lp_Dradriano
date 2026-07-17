@@ -84,3 +84,15 @@ document.querySelectorAll('.gallery-item').forEach(btn => {
 if(lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
 if(lightbox) lightbox.addEventListener('click', (e) => { if(e.target === lightbox) closeLightbox(); });
 document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeLightbox(); });
+
+// Testimonial videos — click to play, native controls take over
+document.querySelectorAll('.video-card').forEach(card => {
+  const video = card.querySelector('video');
+  if(!video) return;
+  card.addEventListener('click', () => {
+    if(card.classList.contains('playing')) return;
+    video.controls = true;
+    video.play();
+    card.classList.add('playing');
+  });
+});
