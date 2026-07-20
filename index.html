@@ -44,10 +44,10 @@
   <nav class="nav container">
     <a href="#top" class="logo">Meta<span>15+</span></a>
     <ul class="nav-links" id="navLinks">
+      <li><a href="#depoimentos" onclick="closeMenu()">Depoimentos</a></li>
+      <li><a href="#medico" onclick="closeMenu()">Dr. Adriano</a></li>
       <li><a href="#metodo" onclick="closeMenu()">Método</a></li>
       <li><a href="#tecnologia" onclick="closeMenu()">Tecnologia</a></li>
-      <li><a href="#medico" onclick="closeMenu()">Dr. Adriano</a></li>
-      <li><a href="#depoimentos" onclick="closeMenu()">Depoimentos</a></li>
       <li><a href="#resultados" onclick="closeMenu()">Resultados</a></li>
       <li><a href="#contato" onclick="closeMenu()">Contato</a></li>
       <li class="only-mobile"><a href="#contato" class="btn btn-primary" onclick="closeMenu()">Agende agora</a></li>
@@ -85,6 +85,9 @@
       </div>
 
       <div class="hero-visual reveal">
+        <div class="hero-photo">
+          <img src="img/dr-adriano-hero.jpg" alt="Dr. Adriano Tagarra avaliando o tratamento com Mounjaro" loading="lazy">
+        </div>
         <div class="floating-chip chip-1"><svg class="icon"><use href="#icon-pulse"></use></svg> Acompanhamento médico contínuo</div>
         <div class="hero-card">
           <div class="hero-card-icon"><svg class="icon"><use href="#icon-chart"></use></svg></div>
@@ -94,6 +97,79 @@
           <div class="hero-progress-label"><span>Meta de emagrecimento</span><span>72%</span></div>
         </div>
         <div class="floating-chip chip-2"><svg class="icon"><use href="#icon-droplet"></use></svg> Mounjaro (Tirzepatida)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section-pad" id="depoimentos">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Depoimentos em vídeo</span>
+        <h2>Histórias reais de quem conseguiu emagrecer com o Meta15+</h2>
+        <p>Veja o que muda quando o emagrecimento é tratado com método, medicação adequada e acompanhamento de verdade.</p>
+      </div>
+      <div class="video-grid stagger">
+        <div class="video-card reveal" style="--i:0">
+          <video preload="none" poster="img/depoimento-joao.jpg" playsinline aria-label="Depoimento em vídeo de João">
+            <source src="video/joao.mp4" type="video/mp4">
+          </video>
+          <span class="play-btn"></span>
+          <span class="video-label">João</span>
+        </div>
+        <div class="video-card reveal" style="--i:1">
+          <video preload="none" poster="img/depoimento-suzana.jpg" playsinline aria-label="Depoimento em vídeo de Suzana">
+            <source src="video/suzana.mp4" type="video/mp4">
+          </video>
+          <span class="play-btn"></span>
+          <span class="video-label">Suzana</span>
+        </div>
+        <div class="video-card reveal" style="--i:2">
+          <video preload="none" poster="img/depoimento-adriana.jpg" playsinline aria-label="Depoimento em vídeo de Adriana">
+            <source src="video/adriana.mp4" type="video/mp4">
+          </video>
+          <span class="play-btn"></span>
+          <span class="video-label">Adriana</span>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:34px;" class="reveal">
+        <a href="#contato" class="btn btn-primary btn-shine">Agende sua consulta diagnóstica</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOCTOR -->
+  <section class="section-pad doctor" id="medico">
+    <div class="container doctor-grid">
+      <div class="doctor-photo-wrap reveal">
+        <div class="doctor-photo">
+          <img src="img/dr-adriano-perfil.jpg" alt="Dr. Adriano Tagarra, especialista em endoscopia bariátrica e emagrecimento" loading="lazy">
+        </div>
+        <div class="doctor-badge-float">
+          <span class="ic"><svg class="icon"><use href="#icon-star"></use></svg></span>
+          <div><b>10+</b><span>experiência em endoscopia bariátrica</span></div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <span class="eyebrow">Quem é o Dr. Adriano Tagarra</span>
+        <h2>Especialista em emagrecimento e saúde digestiva</h2>
+        <p>O Dr. Adriano Tagarra é médico especialista em endoscopia bariátrica e programas de emagrecimento, com vasta experiência no tratamento da obesidade.</p>
+        <p>Sua abordagem une balão gástrico, medicação moderna (como Mounjaro/Tirzepatida) e cuidado humano, oferecendo um método de emagrecimento personalizado para quem deseja emagrecer com segurança, especialmente para quem já tentou outros caminhos sem sucesso.</p>
+
+        <div class="credentials">
+          <span class="cred-pill">CRM PR 29717</span>
+          <span class="cred-pill">RQE Nº 25706</span>
+          <span class="cred-pill">RQE Nº 2967</span>
+        </div>
+
+        <p>Atende na <b>Gastroclínica</b>, em Marechal Cândido Rondon/PR, centro especializado em diagnóstico e tratamento do aparelho digestivo e do emagrecimento, com:</p>
+        <ul class="clinic-list">
+          <li>Ambiente amplo e moderno, projetado para conforto e qualidade no atendimento.</li>
+          <li>Equipamentos de última geração, com endoscopia e colonoscopia em imagem HD.</li>
+          <li>Equipe multidisciplinar de médicos, enfermeiros, nutricionistas e psicólogos.</li>
+        </ul>
+        <a href="#contato" class="btn btn-primary btn-shine">Agende sua avaliação em Marechal agora</a>
       </div>
     </div>
   </section>
@@ -217,79 +293,6 @@
     </div>
   </section>
 
-  <!-- DOCTOR -->
-  <section class="section-pad doctor" id="medico">
-    <div class="container doctor-grid">
-      <div class="doctor-photo-wrap reveal">
-        <div class="doctor-photo">
-          <img src="img/dr-adriano-perfil.jpg" alt="Dr. Adriano Tagarra, especialista em endoscopia bariátrica e emagrecimento" loading="lazy">
-        </div>
-        <div class="doctor-badge-float">
-          <span class="ic"><svg class="icon"><use href="#icon-star"></use></svg></span>
-          <div><b>10+</b><span>experiência em endoscopia bariátrica</span></div>
-        </div>
-      </div>
-
-      <div class="reveal">
-        <span class="eyebrow">Quem é o Dr. Adriano Tagarra</span>
-        <h2>Especialista em emagrecimento e saúde digestiva</h2>
-        <p>O Dr. Adriano Tagarra é médico especialista em endoscopia bariátrica e programas de emagrecimento, com vasta experiência no tratamento da obesidade.</p>
-        <p>Sua abordagem une balão gástrico, medicação moderna (como Mounjaro/Tirzepatida) e cuidado humano, oferecendo um método de emagrecimento personalizado para quem deseja emagrecer com segurança, especialmente para quem já tentou outros caminhos sem sucesso.</p>
-
-        <div class="credentials">
-          <span class="cred-pill">CRM PR 29717</span>
-          <span class="cred-pill">RQE Nº 25706</span>
-          <span class="cred-pill">RQE Nº 2967</span>
-        </div>
-
-        <p>Atende na <b>Gastroclínica</b>, em Marechal Cândido Rondon/PR, centro especializado em diagnóstico e tratamento do aparelho digestivo e do emagrecimento, com:</p>
-        <ul class="clinic-list">
-          <li>Ambiente amplo e moderno, projetado para conforto e qualidade no atendimento.</li>
-          <li>Equipamentos de última geração, com endoscopia e colonoscopia em imagem HD.</li>
-          <li>Equipe multidisciplinar de médicos, enfermeiros, nutricionistas e psicólogos.</li>
-        </ul>
-        <a href="#contato" class="btn btn-primary btn-shine">Agende sua avaliação em Marechal agora</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="section-pad" id="depoimentos">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">Depoimentos em vídeo</span>
-        <h2>Histórias reais de quem conseguiu emagrecer com o Meta15+</h2>
-        <p>Veja o que muda quando o emagrecimento é tratado com método, medicação adequada e acompanhamento de verdade.</p>
-      </div>
-      <div class="video-grid stagger">
-        <div class="video-card reveal" style="--i:0">
-          <video preload="none" poster="img/depoimento-joao.jpg" playsinline aria-label="Depoimento em vídeo de João">
-            <source src="video/joao.mp4" type="video/mp4">
-          </video>
-          <span class="play-btn"></span>
-          <span class="video-label">João</span>
-        </div>
-        <div class="video-card reveal" style="--i:1">
-          <video preload="none" poster="img/depoimento-suzana.jpg" playsinline aria-label="Depoimento em vídeo de Suzana">
-            <source src="video/suzana.mp4" type="video/mp4">
-          </video>
-          <span class="play-btn"></span>
-          <span class="video-label">Suzana</span>
-        </div>
-        <div class="video-card reveal" style="--i:2">
-          <video preload="none" poster="img/depoimento-adriana.jpg" playsinline aria-label="Depoimento em vídeo de Adriana">
-            <source src="video/adriana.mp4" type="video/mp4">
-          </video>
-          <span class="play-btn"></span>
-          <span class="video-label">Adriana</span>
-        </div>
-      </div>
-      <div style="text-align:center; margin-top:34px;" class="reveal">
-        <a href="#contato" class="btn btn-primary btn-shine">Agende sua consulta diagnóstica</a>
-      </div>
-    </div>
-  </section>
-
   <!-- COMMUNITY -->
   <section class="section-pad community">
     <div class="container">
@@ -382,9 +385,10 @@
       <div>
         <h4>Navegação</h4>
         <ul class="contact-list">
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#medico">Dr. Adriano Tagarra</a></li>
           <li><a href="#metodo">Método</a></li>
           <li><a href="#tecnologia">Tecnologia e medicação</a></li>
-          <li><a href="#medico">Dr. Adriano Tagarra</a></li>
           <li><a href="#resultados">Resultados esperados</a></li>
         </ul>
       </div>

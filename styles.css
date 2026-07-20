@@ -72,7 +72,7 @@ section{position:relative;}
 }
 .section-head h2{font-size:clamp(1.7rem,3.2vw,2.5rem); color:#fff;}
 .section-head p{color:#c9dedb;font-size:1.05rem;}
-.section-pad{padding:96px 0; border-top:1px solid rgba(255,255,255,.07);}
+.section-pad{padding:96px 0;}
 @media (max-width:768px){ .section-pad{padding:64px 0;} }
 
 /* ---------- Buttons ---------- */
@@ -298,11 +298,18 @@ header:not(.scrolled) .burger span{background:#fff;}
 }
 .stat span{font-size:.82rem; color:#c9d5dd;}
 
-.hero-visual{position:relative;}
+.hero-visual{position:relative; max-width:420px; margin:0 auto; padding-bottom:40px;}
+.hero-photo{
+  border-radius:26px; overflow:hidden; aspect-ratio:4/5;
+  box-shadow:var(--shadow-lg); border:6px solid rgba(255,255,255,.12);
+  position:relative; z-index:1;
+}
+.hero-photo img{width:100%; height:100%; object-fit:cover; object-position:top center;}
 .hero-card{
-  background:var(--card); border-radius:24px; padding:30px;
+  background:var(--card); border-radius:24px; padding:26px;
   box-shadow:var(--shadow-lg); border:1px solid var(--border);
-  position:relative; z-index:2;
+  position:absolute; left:5%; right:5%; bottom:-28px;
+  z-index:2;
   animation:floaty 6s ease-in-out infinite;
 }
 @keyframes floaty{0%,100%{transform:translateY(0)} 50%{transform:translateY(-14px)}}
@@ -329,8 +336,8 @@ header:not(.scrolled) .burger span{background:#fff;}
   font-size:.8rem; font-weight:700; color:var(--teal-800); z-index:3;
   border:1px solid var(--border);
 }
-.chip-1{top:-24px; left:-24px; animation:floaty 5s ease-in-out infinite; animation-delay:-1s;}
-.chip-2{bottom:10px; right:-30px; animation:floaty 7s ease-in-out infinite; animation-delay:-3s;}
+.chip-1{top:-20px; left:-20px; animation:floaty 5s ease-in-out infinite; animation-delay:-1s;}
+.chip-2{top:56px; right:-24px; animation:floaty 7s ease-in-out infinite; animation-delay:-3s;}
 @media (max-width:600px){ .chip-1,.chip-2{display:none;} }
 
 /* ---------- Pain section ---------- */
@@ -707,7 +714,7 @@ header:not(.scrolled) .burger span{background:#fff;}
 .final-cta h2{color:#fff; font-size:clamp(1.6rem,3vw,2.3rem);}
 .final-cta p{color:#d3ede8; max-width:620px; margin:0 auto 30px; font-size:1.05rem;}
 
-footer{background:var(--teal-900); color:#cdece6; padding:60px 0 30px; border-top:1px solid rgba(255,255,255,.1);}
+footer{background:var(--teal-900); color:#cdece6; padding:60px 0 30px;}
 .footer-grid{
   display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:40px; margin-bottom:40px;
 }
